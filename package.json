@@ -5,7 +5,7 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
-  "author": "Divyanshu <https://github.com/inevitableDivu>",
+  "author": "Divyansh <https://github.com/inevitableDivu>",
   "license": "MIT",
   "homepage": "https://github.com/inevitableDivu/whisper-net#readme",
   "repository": {
