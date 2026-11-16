@@ -94,9 +94,12 @@ export const config: ServerConfig = {
     emptyRoomGracePeriodMs: parseInt(process.env.EMPTY_ROOM_GRACE_MS || String(5 * 60 * 1000), 10), // 5 minutes grace
     burnTombstoneMs: parseInt(process.env.BURN_TOMBSTONE_MS || String(5 * 60 * 1000), 10), // 5 minutes
     maxTimestampDriftMs: parseInt(process.env.MAX_TIMESTAMP_DRIFT_MS || String(5 * 60 * 1000), 10), // 5 minutes clock tolerance
-    allowedOrigins: process.env.ALLOWED_ORIGINS
-      ? process.env.ALLOWED_ORIGINS.split(",").map((s) => s.trim())
-      : ["*"],
+    allowedOrigins:
+      env === "test"
+        ? ["*"]
+        : process.env.ALLOWED_ORIGINS
+          ? process.env.ALLOWED_ORIGINS.split(",").map((s) => s.trim())
+          : ["*"],
   },
 
   rateLimit: {
