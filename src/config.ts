@@ -64,7 +64,13 @@ export interface ServerConfig {
   };
 }
 
-const env = (process.env.NODE_ENV as "development" | "production" | "test") || "development";
+const env =
+  process.env.NODE_ENV === "test"
+    ? "test"
+    : ((process.env.APP_ENV || process.env.NODE_ENV || "development") as
+        | "development"
+        | "production"
+        | "test");
 
 export const config: ServerConfig = {
   env,

@@ -55,19 +55,17 @@
     "demo": "bun run src/client-demo.ts"
   },
   "devDependencies": {
-    "@types/bun": "latest",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.3.0",
+    "typescript": "^5.8.0",
     "vite": "^8.3.8"
-  },
-  "peerDependencies": {
-    "typescript": "^7"
   },
   "dependencies": {
     "@elysiajs/static": "^1.4.12",
     "@elysiajs/swagger": "^1.3.1",
     "@inevitable_divu/use-idb": "^1.5.2",
+    "@types/bun": "^1.2.4",
     "elysia": "^1.4.32",
     "lucide-react": "^1.73.0",
     "react": "^19.3.1",

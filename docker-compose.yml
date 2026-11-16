@@ -1,0 +1,18 @@
+services:
+  whispernet:
+    build: .
+    container_name: whisper-net
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - APP_ENV=production
+      - PORT=3000
+      - HOST=0.0.0.0
+      - ALLOWED_ORIGINS=https://whisper.divyansh.co.in
+      - DATABASE_PATH=data/whisper_net.sqlite
+    volumes:
+      - whisper-data:/app/data
+
+volumes:
+  whisper-data:
